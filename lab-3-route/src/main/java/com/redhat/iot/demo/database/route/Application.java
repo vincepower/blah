@@ -37,7 +37,7 @@ public class Application extends RouteBuilder {
                 .unmarshal().gzip()
                 .unmarshal(format)
                 .process(kurProcess)
-                .to(****Student Code****);
+                .to("direct:db", "direct:fwd");
 
 
         from("direct:fwd")
@@ -47,7 +47,7 @@ public class Application extends RouteBuilder {
                 .to("mqtt:iot-demo?host=tcp://"+MQTT_HOSTNAME+":" + MQTT_PORT +"&userName="+MQTT_USERNAME+"&password="+MQTT_PASSWORD +"&version=3.1.1&qualityOfService=AtMostOnce");
 
         from("direct:db")
-                .process(dbProcessor)
-                .to("jdbc:dataSource");
+.process(dbProcessor)
+.to("jdbc:dataSource");
     }
 }
