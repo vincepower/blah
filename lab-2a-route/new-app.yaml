@@ -27,7 +27,7 @@ items:
       contextDir: lab-2a-route
       git:
         ref: student-labs
-        uri: 'https://github.com/vincepower/rht-iot-demo.git'
+        uri: 'https://github.com/vincepower/blah.git'
       type: Git
     strategy:
       sourceStrategy:
