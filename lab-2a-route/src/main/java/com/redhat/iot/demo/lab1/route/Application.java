@@ -37,6 +37,6 @@ public class Application extends RouteBuilder {
 .setHeader(Exchange.HTTP_METHOD,constant("POST"))
 .setHeader(Exchange.CONTENT_TYPE,constant("application/json"))
 
-                .to("http://lab-2a-web/iot");
+                .to("http://lab-2a-web:8080/iot");
     }
 }
